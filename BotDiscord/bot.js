@@ -456,4 +456,4 @@ client.on('messageCreate', (message) => {
 
 /* LOGIN */
 
-client.login('ODc1NzU5NTM2MTMxMTQ1NzM4.YRaMoA._f57HEHKDviNsJ6_QlM0lHHh3vc')
+client.login({token})
