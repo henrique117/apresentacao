@@ -37,20 +37,28 @@
     text-align: center;
 }
 
+.copy {
+    z-index: 3;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .clouds {
     top: 50px;
     position: absolute;
     width: 400px;
     animation: cloudMove2 20s infinite linear;
-    animation-direction: alternate;
 }
 
 .cloud {
     top: 300px;
     position: absolute;
     width: 400px;
-    animation: cloudMove 20s infinite linear;
-    animation-direction: alternate;
+    animation: cloudMove 10s infinite linear;
 }
 
 .game-board {
@@ -59,7 +67,7 @@
     align-items: center;
     position: absolute;
     width: 100%;
-    height: 615px;
+    height: 650px;
     margin: 0 auto;
     background: linear-gradient(#87CEEB, #E0F6FF);
     overflow: hidden;
@@ -92,43 +100,20 @@
     bottom: 0;
     height: 60px;
     width: 50px;
-    animation: tubinho 2s infinite linear;
-}
-
-.cano1 {
-    animation: tubinho 3s infinite linear;
-}
-
-.cano2 {
-    animation: tubinho 2.7s infinite linear;
-}
-
-.cano3 {
-    animation: tubinho 2.5s infinite linear;
-}
-
-.cano4 {
-    animation: tubinho 2.3s infinite linear;
-}
-
-.cano5 {
-    animation: tubinho 2s infinite linear;
-}
-
-.cano6 {
-    animation: tubinho 1.5s infinite linear;
-}
-
-.cano7 {
-    animation: tubinho 1.2s infinite linear;
+    right: -60px;
+    animation: tubinho 4s infinite linear;
 }
 
 .mario {
     position: absolute;
     height: 80px;
     width: 80px;
-    left: 30px;
+    left: -100px;
     bottom: 0;
+}
+
+.marioStart {
+    animation: start 2s;
 }
 
 .jump {
@@ -137,10 +122,10 @@
 
 @keyframes cloudMove {
     from {
-        left: -400px;
+        right: -400px;
     }
     to {
-        left: 100%;
+        right: 100%;
     }
 }
 
@@ -166,15 +151,23 @@
         bottom: 0;
     }
     40% {
-        bottom: 100px
+        bottom: 120px
     }
     50% {
-        bottom: 100px
+        bottom: 120px
     }
     60% {
-        bottom: 100px
+        bottom: 120px
     }
     100% {
         bottom: 0;
+    }
+}
+
+@keyframes start {
+    from {
+        left: -100px
+    } to {
+        left: 300px;
     }
 }
